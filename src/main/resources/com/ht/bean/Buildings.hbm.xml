@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ht.bean">
+    <class name="Buildings" table="t_buildings">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="name" column="name"/>
+        <property name="area" column="area"/>
+        <property name="address" column="address"/>
+        <property name="floorArea" column="floor_area"/>
+        <property name="buildingArea" column="building_area"/>
+        <property name="houseType" column="house_type"/>
+        <property name="buildingType" column="building_type"/>
+        <property name="longitude" column="longitude"/>
+        <property name="latitude" column="latitude"/>
+        <property name="avgPrice" column="avg_price"/>
+        <property name="company" column="company"/>
+        <property name="openDate" column="open_date"/>
+        <property name="totalRooms" column="total_rooms"/>
+        <property name="receptionAddress" column="reception_address"/>
+        <property name="tel" column="tel"/>
+        <property name="greenRatio" column="green_ratio"/>
+        <property name="plotRatio" column="plot_ratio"/>
+        <property name="propertyCompany" column="property_company"/>
+        <property name="propertyFee" column="property_fee"/>
+        <property name="carStation" column="car_station"/>
+        <property name="traffic" column="traffic"/>
+        <property name="equipments" column="equipments"/>
+        <property name="logo" column="logo"/>
+        <property name="intro" column="intro"/>
+        <property name="createdTime" column="created_time"/>
+        <property name="status" column="status"/>
+        <property name="spell" column="spell"/>
+
+        <set name="employees">
+            <key column="buildings_id"></key>
+            <one-to-many class="com.ht.bean.Employee"></one-to-many>
+        </set>
+
+        <many-to-one lazy="false" fetch="join" name="agency" column="agency_id" class="com.ht.bean.Agency"></many-to-one>
+
+        <set name="activities">
+            <key column="buildings_id"></key>
+            <one-to-many class="com.ht.bean.Activity"></one-to-many>
+        </set>
+
+        <set name="building">
+            <key column="buildings_id"></key>
+            <one-to-many class="com.ht.bean.Building"></one-to-many>
+        </set>
+
+        <set name="houses">
+            <key column="buildings_id"></key>
+            <one-to-many class="com.ht.bean.House"></one-to-many>
+        </set>
+
+        <set name="buildingsImgs">
+            <key column="buildings_id"></key>
+            <one-to-many class="com.ht.bean.BuildingsImg"></one-to-many>
+        </set>
+
+        <set name="messages">
+            <key column="buildings_id"></key>
+            <one-to-many class="com.ht.bean.Message"></one-to-many>
+        </set>
+
+        <set name="comments">
+            <key column="buildings_id"></key>
+            <one-to-many class="com.ht.bean.Comment"></one-to-many>
+        </set>
+
+        <set name="histories">
+            <key column="buildings_id"></key>
+            <one-to-many class="com.ht.bean.History"></one-to-many>
+        </set>
+
+        <set name="likes">
+            <key column="buildings_id"></key>
+            <one-to-many class="com.ht.bean.Like"></one-to-many>
+        </set>
+
+    </class>
+</hibernate-mapping>

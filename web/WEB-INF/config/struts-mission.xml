@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <package name="mission-package" namespace="/mission" extends="base-struts">
+        <action name="*" class="missionController" method="{1}">
+            <result name="allMissionPage">/WEB-INF/view/mission/allMission.jsp</result>
+            <result name="add" type="json"></result>
+            <result name="listMissionByMonth" type="json"></result>
+            <result name="month" type="json"></result>
+            <result name="changeMission" type="json"></result>
+            <result name="missionsByEmplloyeePage">/WEB-INF/view/mission/missionsByEmployee.jsp</result>
+            <result name="listByEmployee" type="json"></result>
+        </action>
+    </package>
+
+</struts>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <package name="customer-package" namespace="/customer" extends="base-struts">
+        <action name="*" class="customerController" method="{1}">
+            <result name="addPage" >/WEB-INF/view/customer/addCustomer.jsp</result>
+            <result name="allCustomerByAgency" >/WEB-INF/view/customer/allCustomerByAgency.jsp</result>
+            <result name="input" >/WEB-INF/view/customer/debug.jsp</result>
+            <result name="addPageByEmployee" >/WEB-INF/view/customer/addCustomerByEmployee.jsp</result>
+            <result name="allCustomerByEmployee" >/WEB-INF/view/customer/allCustomerByEmployee.jsp</result>
+
+            <result name="add" type="json"></result>
+            <result name="listByAgencyId" type="json"></result>
+            <result name="listByEmployeeId" type="json"></result>
+            <result name="changeStatus" type="json"></result>
+            <result name="changeMessage" type="json"></result>
+            <result name="addByEmployee" type="json"></result>
+            <result name="listBuyCustomerByEmployee" type="json"></result>
+            <result name="uploading" type="json"></result>
+
+            <!--<interceptor-ref name="fileUpload">
+                <param name="allowedTypes">
+                    excel
+                </param>
+                <param name="maximumSize">
+                    20971520 &lt;!&ndash;20Mb&ndash;&gt;
+                </param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack"/>-->
+        </action>
+    </package>
+
+</struts>

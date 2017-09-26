@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="agency" namespace="/agency" extends="base-struts">
+		<action name="*" class="agencyController" method="{1}">
+			<result name="loginPage">/WEB-INF/view/agency/login.jsp</result>
+			<result name="regPage">/WEB-INF/view/agency/register.jsp</result>
+			<result name="updatePage">/WEB-INF/view/agency/update.jsp</result>
+			<result name="updatePwdPage">/WEB-INF/view/agency/update_pwd.jsp</result>
+			<result name="home">/WEB-INF/view/agency/home.jsp</result>
+			<result name="waitCheck">/WEB-INF/view/agency/wait.jsp</result>
+			<result name="info">/WEB-INF/view/agency/info.jsp</result>
+			<result name="uncheckPager">/WEB-INF/view/agency/unchecked.jsp</result>
+			<result name="checkPager">/WEB-INF/view/agency/checked.jsp</result>
+			<result name="detail">/WEB-INF/view/reception/agency.jsp</result>
+			<result name="upHeadIcon">/WEB-INF/view/agency/upHeadIcon.jsp</result>
+
+			<result name="dealCheck" type="json"></result><!--??转回审核页面还是json格式？-->
+			<result name="reg" type="json"></result>
+			<result name="login" type="json"></result>
+			<result name="update" type="json"></result>
+			<result name="updatePwd" type="json"></result>
+
+			<result name="uncheck" type="json"></result>
+			<result name="check" type="json"></result>
+			<result name="beUsable" type="json"></result>
+			<result name="beDisable" type="json"></result>
+			<result name="adminUpAgency" type="json"></result>
+			<result name="authCode" type="json"></result>
+			<result name="checkCode" type="json"></result>
+			<result name="checkHeadIcon" type="json"></result>
+
+			<result name="logout" type="redirect">/index.jsp</result>
+		</action>
+	</package>
+
+</struts>

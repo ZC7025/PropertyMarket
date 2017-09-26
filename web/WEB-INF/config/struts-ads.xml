@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.custom.i18n.resources" value="message"/>
+    <package name="ads" namespace="/ads" extends="base-struts">
+        <action name="*" class="adsController" method="{1}">
+
+            <result name="addPage">/WEB-INF/view/ads/add.jsp</result>
+            <result name="adsPager">/WEB-INF/view/ads/adsPager.jsp</result>
+
+
+            <result name="pager" type="json"></result>
+            <result name="beUsable" type="json"></result>
+            <result name="beDisable" type="json"></result>
+            <result name="upAds" type="json"></result>
+            <result name="addAds" type="json"></result>
+
+            <interceptor-ref name="fileUpload">
+                <param name="allowedTypes">
+                    image/jpeg,image/jpg,image/png
+                </param>
+                <param name="maximumSize">
+                    2097152 <!--2Mb-->
+                </param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack"/>
+        </action>
+    </package>
+
+</struts>

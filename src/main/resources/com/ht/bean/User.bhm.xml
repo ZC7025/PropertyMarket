@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ht.bean">
+    <class name="User" table="t_user">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="email" column="email"/>
+        <property name="phone" column="phone"/>
+        <property name="pwd" column="pwd"/>
+        <property name="qq" column="qq"/>
+        <property name="wechat" column="wechat"/>
+        <property name="gender" column="gender"/>
+        <property name="birthday" column="birthday"/>
+        <property name="nickname" column="nickname"/>
+        <property name="name" column="name"/>
+        <property name="headicon" column="headicon"/>
+        <property name="status" column="status"/>
+        <property name="createdTime" column="created_time"/>
+
+        <set name="appointments">
+            <key column="user_id"></key>
+            <one-to-many class="com.ht.bean.Appointment"></one-to-many>
+        </set>
+
+        <set name="messages">
+            <key column="user_id"></key>
+            <one-to-many class="com.ht.bean.Message"></one-to-many>
+        </set>
+
+        <set name="comments">
+            <key column="user_id"></key>
+            <one-to-many class="com.ht.bean.Comment"></one-to-many>
+        </set>
+
+        <set name="histories">
+            <key column="user_id"></key>
+            <one-to-many class="com.ht.bean.History"></one-to-many>
+        </set>
+
+        <set name="likes">
+            <key column="user_id"></key>
+            <one-to-many class="com.ht.bean.Like"></one-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

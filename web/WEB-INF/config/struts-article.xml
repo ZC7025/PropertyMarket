@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.custom.i18n.resources" value="message"/>
+    <package name="article" namespace="/article" extends="base-struts">
+        <action name="*" class="articleController" method="{1}">
+            <result name="addPage">/WEB-INF/view/article/add.jsp</result>
+            <result name="articlePager">/WEB-INF/view/article/pager1.jsp</result>
+
+            <result name="input" type="redirect">/article/addPage</result>
+            <result name="listPager">/WEB-INF/view/article/listPager.jsp</result>
+            <result name="personInfor">/WEB-INF/view/article/person.jsp</result>
+
+            <result name="pager" type="json"></result>
+            <result name="beUsable" type="json"></result>
+            <result name="beDisable" type="json"></result>
+            <result name="addArticle" type="json"></result>
+            <result name="upArticle" type="json"></result>
+            <result name="search" type="json"></result>
+
+            <interceptor-ref name="fileUpload">
+                <param name="allowedTypes">
+                    image/jpeg,image/jpg,image/png
+                </param>
+                <param name="maximumSize">
+                    2097152 <!--2Mb-->
+                </param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack"/>
+        </action>
+    </package>
+
+</struts>

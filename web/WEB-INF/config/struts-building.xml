@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="build" namespace="/build" extends="base-struts">
+		<action name="*" class="buildingController" method="{1}">
+			<result name="addPage">/WEB-INF/view/building/add.jsp</result>
+			<result name="listPage">/WEB-INF/view/building/list.jsp</result>
+			<result name="roomPage">/WEB-INF/view/building/room_page.jsp</result>
+			<result name="add" type="json"></result>
+			<result name="listBuild" type="json"></result>
+			<result name="update" type="json"></result>
+			<result name="updateStatus" type="json"></result>
+			<result name="roomSale" type="json"></result>
+			<result name="updateRoom" type="json"></result>
+			<result name="listBuildingByEmployee" type="json"></result>
+			<result name="countFloor" type="json"></result>
+			<result name="checkRoom" type="json"></result>
+		</action>
+	</package>
+
+</struts>

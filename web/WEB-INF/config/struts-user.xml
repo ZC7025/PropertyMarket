@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <package name="user-package" namespace="/user" extends="base-struts">
+        <action name="*" class="userController" method="{1}">
+
+            <result name="userLoginPage">/WEB-INF/view/user/userLogin.jsp</result>
+            <result name="userRegisterPage">/WEB-INF/view/user/userRegister.jsp</result>
+            <result name="userCenter">/WEB-INF/view/user/userCenter.jsp</result>
+            <result name="userMessage">/WEB-INF/view/user/userMessage.jsp</result>
+            <result name="chartsPage">/WEB-INF/view/user/charts.jsp</result>
+            <result name="userLoginout">/index</result>
+            <result name="userChangePwdPage">/WEB-INF/view/user/userChangePwd.jsp</result>
+            <result name="toUserPager">/WEB-INF/view/user/pager.jsp</result>
+            <result name="logout" type="redirect">/index.jsp</result>
+            <result name="userLoginPage1">/WEB-INF/view/user/userLogin1.jsp</result>
+            <result name="upHeadIcon">/WEB-INF/view/user/upHeadIcon.jsp</result>
+            <result name="welcome">/WEB-INF/view/reception/welcome.jsp</result>
+
+
+            <result name="login" type="json"></result>
+            <result name="register" type="json"></result>
+            <result name="userChangeMessage" type="json"></result>
+            <result name="userChangePwd" type="json"></result>
+            <result name="userPager" type="json"></result>
+            <result name="charts" type="json"></result>
+
+            <result name="beUsable" type="json"></result>
+            <result name="beDisable" type="json"></result>
+            <result name="checkHeadIcon" type="json"></result>
+            <result name="getById" type="json"></result>
+            <result name="authCode" type="json"></result>
+            <result name="checkCode" type="json"></result>
+
+        </action>
+    </package>
+
+</struts>

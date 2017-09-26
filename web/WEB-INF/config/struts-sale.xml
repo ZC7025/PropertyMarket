@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <package name="sale-package" namespace="/sale" extends="base-struts">
+        <action name="*" class="saleController" method="{1}">
+            <result name="addSalePage">/WEB-INF/view/sale/addSale.jsp</result>
+            <result name="allSalePage">/WEB-INF/view/sale/allSale.jsp</result>
+            <result name="saleMoneyPage">/WEB-INF/view/sale/money_charts.jsp</result>
+            <result name="saleCountPage">/WEB-INF/view/sale/count_charts.jsp</result>
+            <result name="saleMoney" type="json"></result>
+            <result name="saleCount" type="json"></result>
+            <result name="empChartsPage" >/WEB-INF/view/employee/count_charts.jsp</result>
+            <result name="empCharts" type="json"></result>
+            <result name="add" type="json"></result>
+            <result name="listByEmployeeId" type="json"></result>
+            <result name="changeStatus" type="json"></result>
+            <result name="changeSale" type="json"></result>
+            <result name="getCustomer" type="json"></result>
+        </action>
+    </package>
+
+</struts>

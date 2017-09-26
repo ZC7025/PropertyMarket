@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ht.bean">
+    <class name="Customer" table="t_customer">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="name" column="name"/>
+        <property name="gender" column="gender"/>
+        <property name="birthday" column="birthday"/>
+        <property name="identityId" column="identity_id"/>
+        <property name="email" column="email"/>
+        <property name="phone" column="phone"/>
+        <property name="address" column="address"/>
+        <property name="customerType" column="customer_type"/>
+        <property name="together" column="together"/>
+        <property name="contract" column="contract"/>
+        <property name="archives" column="archives"/>
+        <property name="createdTime" column="created_time"/>
+        <property name="status" column="status"/>
+
+        <many-to-one name="employee" column="emp_id"></many-to-one>
+
+        <many-to-one name="agency" column="agency_id"></many-to-one>
+        <set name="sales">
+            <key column="customer_id"></key>
+            <one-to-many class="com.ht.bean.Sale"></one-to-many>
+        </set>
+
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--admin-->
+    <bean id="adminDAO" class="com.ht.dao.impl.AdminDAOImpl" autowire="byName"></bean>
+    <bean id="adminService" class="com.ht.service.impl.AdminServiceImpl" autowire="byName"></bean>
+    <bean id="adminController" class="com.ht.controller.AdminController" autowire="byName"></bean>
+
+    <!--agency-->
+    <bean id="agencyDAO" class="com.ht.dao.impl.AgencyDAOImpl" autowire="byName"></bean>
+    <bean id="agencyService" class="com.ht.service.impl.AgencyServiceImpl" autowire="byName"></bean>
+    <bean id="agencyController" class="com.ht.controller.AgencyController" autowire="byName"></bean>
+
+    <!--Employee-->
+    <bean id="employeeDAO" class="com.ht.dao.impl.EmployeeDAOImpl" autowire="byName"></bean>
+    <bean id="employeeService" class="com.ht.service.impl.EmployeeServiceImpl" autowire="byName"></bean>
+    <bean id="employeeController" class="com.ht.controller.EmployeeController" autowire="byName"></bean>
+
+    <!--user-->
+    <bean id="userDAO" class="com.ht.dao.impl.UserDAOImpl" autowire="byName"></bean>
+    <bean id="userService" class="com.ht.service.impl.UserServiceImpl" autowire="byName"></bean>
+    <bean id="userController" class="com.ht.controller.UserController" autowire="byName"></bean>
+
+    <!--buildings-->
+    <bean id="buildingsDAO" class="com.ht.dao.impl.BuildingsDAOImpl" autowire="byName"></bean>
+    <bean id="buildingsService" class="com.ht.service.impl.BuildingsServiceImpl" autowire="byName"></bean>
+    <bean id="buildingsController" class="com.ht.controller.BuildingsController" autowire="byName"></bean>
+
+    <!--customer-->
+    <bean id="customerDAO" class="com.ht.dao.impl.CustomerDAOImpl" autowire="byName"></bean>
+    <bean id="customerService" class="com.ht.service.impl.CustomerServiceImpl" autowire="byName"></bean>
+    <bean id="customerController" class="com.ht.controller.CustomerController" autowire="byName"></bean>
+
+    <!--Activity-->
+    <bean id="activityDAO" class="com.ht.dao.impl.ActivityDAOImpl" autowire="byName"></bean>
+    <bean id="activityService" class="com.ht.service.impl.ActivityServiceImpl" autowire="byName"></bean>
+    <bean id="activityController" class="com.ht.controller.ActivityController" autowire="byName"></bean>
+
+    <!--ArticleType-->
+    <bean id="articleTypeDAO" class="com.ht.dao.impl.ArticleTypeDAOImpl" autowire="byName"></bean>
+    <bean id="articleTypeService" class="com.ht.service.impl.ArticleTypeServiceImpl" autowire="byName"></bean>
+    <bean id="articleTypeController" class="com.ht.controller.ArticleTypeController" autowire="byName"></bean>
+
+    <!--Article-->
+    <bean id="articleDAO" class="com.ht.dao.impl.ArticleDAOImpl" autowire="byName"></bean>
+    <bean id="articleService" class="com.ht.service.impl.ArticleServiceImpl" autowire="byName"></bean>
+    <bean id="articleController" class="com.ht.controller.ArticleController" autowire="byName"></bean>
+
+    <!--building-->
+    <bean id="buildingDAO" class="com.ht.dao.impl.BuildingDAOImpl" autowire="byName"></bean>
+    <bean id="buildingService" class="com.ht.service.impl.BuildingServiceImpl" autowire="byName"></bean>
+    <bean id="buildingController" class="com.ht.controller.BuildingController" autowire="byName"></bean>
+
+    <!--house-->
+    <bean id="houseDAO" class="com.ht.dao.impl.HouseDAOImpl" autowire="byName"></bean>
+    <bean id="houseService" class="com.ht.service.impl.HouseServiceImpl" autowire="byName"></bean>
+    <bean id="houseController" class="com.ht.controller.HouseController" autowire="byName"></bean>
+
+    <!--buildingsImg-->
+    <bean id="buildingsImgDAO" class="com.ht.dao.impl.BuildingsImgDAOImpl" autowire="byName"></bean>
+    <bean id="buildingsImgService" class="com.ht.service.impl.BuildingsImgServiceImpl" autowire="byName"></bean>
+    <bean id="buildingsImgController" class="com.ht.controller.BuildingsImgController" autowire="byName"></bean>
+
+    <!--sale-->
+    <bean id="saleDAO" class="com.ht.dao.impl.SaleDAOImpl" autowire="byName"></bean>
+    <bean id="saleService" class="com.ht.service.impl.SaleServiceImpl" autowire="byName"></bean>
+    <bean id="saleController" class="com.ht.controller.SaleController" autowire="byName"></bean>
+
+    <!--Ads-->
+    <bean id="adsDAO" class="com.ht.dao.impl.AdsDAOImpl" autowire="byName"></bean>
+    <bean id="adsService" class="com.ht.service.impl.AdsServiceImpl" autowire="byName"></bean>
+    <bean id="adsController" class="com.ht.controller.AdsController" autowire="byName"></bean>
+
+    <!--room-->
+    <bean id="roomDAO" class="com.ht.dao.impl.RoomDAOImpl" autowire="byName"></bean>
+    <bean id="roomService" class="com.ht.service.impl.RoomServiceImpl" autowire="byName"></bean>
+    <bean id="roomController" class="com.ht.controller.RoomController" autowire="byName"></bean>
+
+    <!--room-->
+    <bean id="missionDAO" class="com.ht.dao.impl.MissionDAOImpl" autowire="byName"></bean>
+    <bean id="missionService" class="com.ht.service.impl.MissionServiceImpl" autowire="byName"></bean>
+    <bean id="missionController" class="com.ht.controller.MissionController" autowire="byName"></bean>
+
+    <!--message-->
+    <bean id="messageDAO" class="com.ht.dao.impl.MessageDAOImpl" autowire="byName"></bean>
+    <bean id="messageService" class="com.ht.service.impl.MessageServiceImpl" autowire="byName"></bean>
+    <bean id="messageController" class="com.ht.controller.MessageController" autowire="byName"></bean>
+
+    <!--comment-->
+    <bean id="commentDAO" class="com.ht.dao.impl.CommentDAOImpl" autowire="byName"></bean>
+    <bean id="commentService" class="com.ht.service.impl.CommentServiceImpl" autowire="byName"></bean>
+    <bean id="commentController" class="com.ht.controller.CommentController" autowire="byName"></bean>
+
+    <!--home-->
+    <bean id="homeController" class="com.ht.controller.HomeController" autowire="byName"></bean>
+
+    <!--appointment-->
+    <bean id="appointmentDAO" class="com.ht.dao.impl.AppointmentDAOImpl" autowire="byName"></bean>
+    <bean id="appointmentService" class="com.ht.service.impl.AppointmentServiceImpl" autowire="byName"></bean>
+    <bean id="appointmentController" class="com.ht.controller.AppointmentController" autowire="byName"></bean>
+
+    <!--history-->
+    <bean id="historyDAO" class="com.ht.dao.impl.HistoryDAOImpl" autowire="byName"></bean>
+    <bean id="historyService" class="com.ht.service.impl.HistoryServiceImpl" autowire="byName"></bean>
+    <bean id="historyController" class="com.ht.controller.HistoryController" autowire="byName"></bean>
+
+    <!--like-->
+    <bean id="likeDAO" class="com.ht.dao.impl.LikeDAOImpl" autowire="byName"></bean>
+    <bean id="likeService" class="com.ht.service.impl.LikeServiceImpl" autowire="byName"></bean>
+    <bean id="likeController" class="com.ht.controller.LikeController" autowire="byName"></bean>
+
+</beans>
+

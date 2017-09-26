@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <package name="employee-package" namespace="/employee" extends="base-struts">
+        <action name="*" class="employeeController" method="{1}">
+            <result name="employeeLoginPager">/WEB-INF/view/employee/employeeLogin.jsp</result>
+            <result name="toBackground">/WEB-INF/view/employee/employee.jsp</result>
+            <result name="viewPersonInfo">/WEB-INF/view/employee/employeeInformation.jsp</result>
+            <result name="toUpdatePwdPage">/WEB-INF/view/employee/updateEmpPwd.jsp</result>
+            <result name="addPage">/WEB-INF/view/employee/addEmployee.jsp</result>
+            <result name="allEmployeePage" >/WEB-INF/view/employee/allEmployee.jsp</result>
+            <result name="input">/WEB-INF/view/employee/debug.jsp</result>
+            <result name="logout" type="redirect">/index.jsp</result>
+            <result name="upHeadIcon">/WEB-INF/view/employee/upHeadIcon.jsp</result>
+
+            <result name="login" type="json"></result>
+            <result name="updateEmpPersonInfo" type="json"></result>
+            <result name="updateEmpPwd" type="json"></result>
+            <result name="add" type="json"></result>
+            <result name="allEmployee" type="json"></result>
+            <result name="changeStatus" type="json"></result>
+            <result name="changeMessage" type="json"></result>
+            <result name="listByAgencyID" type="json"></result>
+            <result name="checkHeadIcon" type="json"></result>
+            <result name="getById" type="json"></result>
+
+        </action>
+    </package>
+
+</struts>

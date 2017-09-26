@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <package name="message" namespace="/message" extends="base-struts">
+        <action name="*" class="messageController" method="{1}">
+            <result name="listPage">/WEB-INF/view/message/list.jsp</result>
+            <result name="userListPage">/WEB-INF/view/message/user_list.jsp</result>
+            <result name="list" type="json"></result>
+            <result name="userList" type="json"></result>
+            <result name="reply" type="json"></result>
+            <result name="remove" type="json"></result>
+            <result name="update" type="json"></result>
+            <result name="add" type="json"></result>
+            <result name="frontList" type="json"></result>
+        </action>
+    </package>
+
+</struts>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <package name="appointment-package" namespace="/appointment" extends="base-struts">
+        <action name="*" class="appointmentController" method="{1}">
+            <result name="allAppointmentByEmployeePage">/WEB-INF/view/appointment/allAppointmentByEmployee.jsp</result>
+            <result name="allAppointmentByAgencyPage">/WEB-INF/view/appointment/allAppointmentByAgency.jsp</result>
+            <result name="appointmentByEmployee">/WEB-INF/view/reception/staff.jsp</result>
+            <result name="seeAppointmentByUserPage">/WEB-INF/view/appointment/seeAppointmentByUserPage.jsp</result>
+
+
+            <result name="listByEmployee" type="json"></result>
+            <result name="changeAppStatus" type="json"></result>
+            <result name="changeStatus" type="json"></result>
+            <result name="addArriveTime" type="json"></result>
+            <result name="listByAgency" type="json"></result>
+            <result name="delAppointment" type="json"></result>
+            <result name="judgtAppointmentByUser" type="json"></result>
+            <result name="addAppointment" type="json"></result>
+            <result name="delAppointmentByUserEmployee" type="json"></result>
+            <result name="listByUser" type="json"></result>
+            <result name="changeAppointment" type="json"></result>
+        </action>
+    </package>
+
+</struts>

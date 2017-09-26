@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ht.bean">
+    <class name="Agency" table="t_agency">
+        <id name="id" column="id">
+           <generator class="uuid"/>
+        </id>
+        <property name="name" column="name"/>
+        <property name="email" column="email"/>
+        <property name="pwd" column="pwd"/>
+        <property name="leader" column="leader"/>
+        <property name="phone" column="phone"/>
+        <property name="tel" column="tel"/>
+        <property name="address" column="address"/>
+        <property name="logo" column="logo"/>
+        <property name="intro" column="intro"/>
+        <property name="createdTime" column="created_time"/>
+        <property name="checkedStatus" column="checked_status"/>
+        <property name="status" column="status"/>
+        <property name="spell" column="spell"/>
+
+        <set name="employees">
+            <key column="agency_id"></key>
+            <one-to-many class="com.ht.bean.Employee"></one-to-many>
+        </set>
+
+        <set name="customers">
+            <key column="agency_id"></key>
+            <one-to-many class="com.ht.bean.Customer"></one-to-many>
+        </set>
+        <set name="buildings">
+            <key column="agency_id"></key>
+            <one-to-many class="com.ht.bean.Buildings"></one-to-many>
+        </set>
+
+        <set name="buildingSet">
+            <key column="agency_id"></key>
+            <one-to-many class="com.ht.bean.Building"></one-to-many>
+        </set>
+
+        <set name="activities">
+          <key column="agency_id"></key>
+            <one-to-many class="com.ht.bean.Activity"></one-to-many>
+        </set>
+
+        <set name="houses">
+            <key column="agency_id"></key>
+            <one-to-many class="com.ht.bean.House"></one-to-many>
+        </set>
+
+        <set name="sales">
+            <key column="agency_id"></key>
+            <one-to-many class="com.ht.bean.Sale"></one-to-many>
+        </set>
+
+        <set name="messages">
+            <key column="agency_id"></key>
+            <one-to-many class="com.ht.bean.Message"></one-to-many>
+        </set>
+        <set name="appointments">
+            <key column="agency_id"></key>
+            <one-to-many class="com.ht.bean.Appointment"></one-to-many>
+        </set>
+
+        <set name="comments">
+            <key column="agency_id"></key>
+            <one-to-many class="com.ht.bean.Comment"></one-to-many>
+        </set>
+
+    </class>
+</hibernate-mapping>

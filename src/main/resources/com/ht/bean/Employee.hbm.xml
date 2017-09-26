@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ht.bean">
+    <class name="Employee" table="t_employee">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="name" column="name"/>
+        <property name="email" column="email"/>
+        <property name="pwd" column="pwd"/>
+        <property name="phone" column="phone"/>
+        <property name="qq" column="qq"/>
+        <property name="wechat" column="wechat"/>
+        <property name="gender" column="gender"/>
+        <property name="exp" column="exp"/>
+        <property name="des" column="des"/>
+        <property name="address" column="address"/>
+        <property name="basicSalary" column="basic_salary"/>
+        <property name="headicon" column="headicon"/>
+        <property name="intro" column="intro"/>
+        <property name="createdTime" column="created_time"/>
+        <property name="status" column="status"/>
+
+        <many-to-one name="agency" class="com.ht.bean.Agency" column="agency_id"></many-to-one>
+        <many-to-one name="buildings" class="com.ht.bean.Buildings" column="buildings_id"></many-to-one>
+
+        <set name="customers">
+            <key column="emp_id" ></key>
+            <one-to-many class="com.ht.bean.Customer"></one-to-many>
+        </set>
+
+        <set name="sales">
+            <key column="emp_id"></key>
+            <one-to-many class="com.ht.bean.Sale"></one-to-many>
+        </set>
+
+        <set name="missions">
+            <key column="emp_id"></key>
+            <one-to-many class="com.ht.bean.Mission"></one-to-many>
+        </set>
+
+        <set name="appointments">
+            <key column="emp_id"></key>
+            <one-to-many class="com.ht.bean.Appointment"></one-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

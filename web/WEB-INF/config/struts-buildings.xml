@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="builds" namespace="/builds" extends="base-struts">
+		<action name="*" class="buildingsController" method="{1}">
+			<result name="addPage">/WEB-INF/view/buildings/add.jsp</result>
+			<result name="addImgPage">/WEB-INF/view/buildings/add_img.jsp</result>
+			<result name="imgPage">/WEB-INF/view/buildings/img_list.jsp</result>
+			<result name="listPage">/WEB-INF/view/buildings/list.jsp</result>
+			<result name="updatePage">/WEB-INF/view/buildings/update.jsp</result>
+			<result name="buildingsPager">/WEB-INF/view/buildings/pager.jsp</result>
+			<result name="listPager">/WEB-INF/view/buildings/listPager.jsp</result>
+			<result name="personInfo">/WEB-INF/view/buildings/person.jsp</result>
+
+			<result name="add" type="json"></result>
+			<result name="listByAgencyID" type="json"></result>
+			<result name="addImg" type="json"></result>
+			<result name="list" type="json"></result>
+			<result name="imgList" type="json"></result>
+			<result name="update" type="json"></result>
+			<result name="updateStatus" type="json"></result>
+			<result name="pager" type="json"></result>
+			<result name="search" type="json"></result>
+
+		</action>
+	</package>
+
+</struts>
